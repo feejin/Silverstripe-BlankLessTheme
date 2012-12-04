@@ -1,0 +1,32 @@
+@import '_reset';
+@import '_normalize';
+@import '_variables';
+@import '_typography';
+
+// WEBSITE
+// ----------------------------------------------------------------------------------
+body
+{
+	background: @white;
+	color: @black;
+}
+
+.typography { overflow: hidden; }
+.h { display: none !important; }
+
+.top 
+{
+	overflow: hidden;
+}
+
+// CLEARFIX -- ASSIGN CLASS TO ELEMENT TO SELF CLEAR CHILDREN
+.group
+{
+	&:before, &:after 
+	{
+    	content: "";
+    	display: table;
+	} 
+	&:after { clear: both; }
+    zoom: 1; // IE 6/7
+}

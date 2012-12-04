@@ -1,0 +1,48 @@
+// STANDARD FORM MESSAGE COLOURS
+
+@message-good: #468847;
+@message-good-bg: #DFF0D8;
+@message-good-border: #D6E9C6;
+
+@message-bad: #B94A48;
+@message-bad-bg: #F2DEDE;
+@message-bad-border: #EED3D7;
+
+// SITE VARIABLES
+
+@white: #fff;
+@black: #000;
+
+@font-head: arial,sans-serif;
+@font-body: arial,sans-serif;
+
+
+// LESS MIXINS
+.spr-main(@x, @y)
+{
+	background-image: url();
+	background-repeat: no-repeat;
+	background-position: @x @y;
+}
+
+.rounded(@radius: 5px)
+{
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	border-radius: @radius;
+}
+.rounded-partial(@tl, @tr, @br, @bl)
+{
+	-webkit-border-top-left-radius: @tl;
+	-webkit-border-top-right-radius: @tr;
+	-webkit-border-bottom-right-radius: @br;
+	-webkit-border-bottom-left-radius: @bl;
+	-moz-border-top-left-radius: @tl;
+	-moz-border-top-right-radius: @tr;
+	-moz-border-bottom-right-radius: @br;
+	-moz-border-bottom-left-radius: @bl;
+	border-top-left-radius: @tl;
+	border-top-right-radius: @tr;
+	border-bottom-right-radius: @br;
+	border-bottom-left-radius: @bl;
+}
