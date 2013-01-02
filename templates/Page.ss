@@ -12,15 +12,11 @@
 </head>
 <body class="$ClassName">
 
-<div class="top">
-
 <% include Nav %>
 
 $Layout
 
 <% include Footer %>
-	
-</div>
 
 </body>
 </html>

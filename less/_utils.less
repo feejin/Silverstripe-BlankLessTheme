@@ -1,0 +1,30 @@
+/* Utilities and overrides
+   PS. UPPERCASE COMMENTS ARE COOL
+*/
+
+// THIS IS TO STOP USER EDITABLE AREAS GETTING OUT OF CONTROL
+// CLEARFIX (SEE BELOW) IS PREFERABLE IF YOU CAN TRUST YOUR EDITORS
+// ------------------------------------------------------------------------------------------
+
+.typography {
+	overflow: hidden;
+}
+
+// OCCASIONALLY HANDY CLASS FOR FORCING STUFF TO HIDE
+// ------------------------------------------------------------------------------------------
+
+.h {
+	display: none !important;
+}
+
+// CLEARFIX -- ASSIGN CLASS TO ELEMENT TO SELF CLEAR CHILDREN
+// ------------------------------------------------------------------------------------------
+
+.group {
+	&:before, &:after {
+    	content: "";
+    	display: table;
+	}
+	&:after { clear: both; }
+    zoom: 1; // IE 6/7
+}

@@ -1,4 +1,8 @@
+/* Variables and Mixins
+*/
+
 // STANDARD FORM MESSAGE COLOURS
+// ------------------------------------------------------------------------------------------
 
 @message-good: #468847;
 @message-good-bg: #DFF0D8;
@@ -9,6 +13,7 @@
 @message-bad-border: #EED3D7;
 
 // SITE VARIABLES
+// ------------------------------------------------------------------------------------------
 
 @white: #fff;
 @black: #000;
@@ -17,7 +22,10 @@
 @font-body: arial,sans-serif;
 
 
-// LESS MIXINS
+// MIXINS
+// ------------------------------------------------------------------------------------------
+
+// GENERIC SPRITE
 .spr-main(@x, @y)
 {
 	background-image: url();
@@ -25,12 +33,17 @@
 	background-position: @x @y;
 }
 
+// ROUNDED BOXES
+// -MOZ / -WEBKIT ARE A BIT REDUNDANT BUT CAN STAY FOR NOW
 .rounded(@radius: 5px)
 {
 	-moz-border-radius: @radius;
 	-webkit-border-radius: @radius;
 	border-radius: @radius;
 }
+
+// PARTIALLY ROUNDED BOXES
+// AGAIN, -MOZ / -WEBKIT ARE A BIT REDUNDANT BUT CAN STAY FOR NOW
 .rounded-partial(@tl, @tr, @br, @bl)
 {
 	-webkit-border-top-left-radius: @tl;

@@ -1,62 +1,53 @@
-// normalize.css v2.0.1 | MIT License | git.io/normalize
-// edited by colin to remove clashes with reset and stripped
-// most typography stuff as we do that ourselves
+/* normalize.css v2.0.1 | MIT License | git.io/normalize
+*/
 
-// the full version has loads of stuff we rarely use 
-// like <mark> and <abbr>, but worth remembering
+// Edited to remove clashes with reset and stripped most
+// typography stuff as we override that in _typography.less
+// ------------------------------------------------------------------------------------------
 
 audio,
 canvas,
-video 
-{
+video {
     display: inline-block;
 }
 
 // Prevents modern browsers from displaying `audio` without controls.
 // Remove excess height in iOS 5 devices.
 
-audio:not([controls]) 
-{
+audio:not([controls]) {
     display: none;
     height: 0;
 }
 
 // Addresses styling for `hidden` attribute not present in IE 8/9.
 
-[hidden] 
-{
+[hidden] {
     display: none;
 }
 
-// 1. Sets default font family to sans-serif.
 // 2. Prevents iOS text size adjust after orientation change, without disabling user zoom.
 
-html 
-{
-    font-family: sans-serif; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-    -ms-text-size-adjust: 100%; /* 2 */
+html {
+    -webkit-text-size-adjust: 100%; /* 1 */
+    -ms-text-size-adjust: 100%; /* 1 */
 }
 
 // Addresses `outline` inconsistency between Chrome and other browsers.
 
-a:focus 
-{
+a:focus {
     outline: thin dotted;
 }
 
 // Improves readability when focused and also mouse hovered in all browsers.
 
 a:active,
-a:hover 
-{
+a:hover {
     outline: 0;
 }
 
 // Corrects overflow displayed oddly in IE 9.
 
-svg:not(:root) 
-{
+svg:not(:root) {
     overflow: hidden;
 }
 
@@ -67,8 +58,7 @@ svg:not(:root)
 button,
 html input[type="button"], // 1
 input[type="reset"],
-input[type="submit"] 
-{
+input[type="submit"] {
     -webkit-appearance: button; // 2
     cursor: pointer; // 3
 }
@@ -76,8 +66,7 @@ input[type="submit"]
 // Reset default cursor for disabled elements.
 
 button[disabled],
-input[disabled] 
-{
+input[disabled] {
     cursor: default;
 }
 
@@ -85,8 +74,7 @@ input[disabled]
 // 2. Removes excess padding in IE 8/9.
 
 input[type="checkbox"],
-input[type="radio"] 
-{
+input[type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
 }
@@ -95,8 +83,7 @@ input[type="radio"]
 // Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
 // (include `-moz` to future-proof).
 
-input[type="search"] 
-{
+input[type="search"] {
     -webkit-appearance: textfield; // 1
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box; // 2
@@ -107,8 +94,7 @@ input[type="search"]
 // Removes inner padding and search cancel button in Safari 5 and Chrome on OS X.
 
 input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration 
-{
+input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
