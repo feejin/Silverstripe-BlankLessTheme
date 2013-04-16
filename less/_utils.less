@@ -1,9 +1,8 @@
-/* Utilities and overrides
-   PS. UPPERCASE COMMENTS ARE COOL
-*/
+// Utilities and mixins
+// ------------------------------------------------------------------------------------------
 
 // THIS IS TO STOP USER EDITABLE AREAS GETTING OUT OF CONTROL
-// CLEARFIX (SEE BELOW) IS PREFERABLE IF YOU CAN TRUST YOUR EDITORS
+// .GROUP (SEE BELOW) IS PREFERABLE IF YOU CAN TRUST YOUR EDITORS
 // ------------------------------------------------------------------------------------------
 
 .typography {
@@ -27,4 +26,48 @@
 	}
 	&:after { clear: both; }
     zoom: 1; // IE 6/7
+}
+
+// GENERIC SPRITE (@ox offset, @y offset)
+// ------------------------------------------------------------------------------------------
+.sprite(@x, @y)
+{
+	background-image: url();
+	background-repeat: no-repeat;
+	background-position: @x @y;
+}
+
+// ROUNDED CORNERS (@radious)
+// ------------------------------------------------------------------------------------------
+.rounded(@r: 5px)
+{
+	-moz-border-radius: @r;
+	-webkit-border-radius: @r;
+	border-radius: @r;
+}
+
+// PARTIALLY ROUNDED CORNERS (@top-left, @top-right, @bottom-right, @bottom-left)
+// ------------------------------------------------------------------------------------------
+.rounded-partial(@tl, @tr, @br, @bl)
+{
+	-webkit-border-top-left-radius: @tl;
+	-webkit-border-top-right-radius: @tr;
+	-webkit-border-bottom-right-radius: @br;
+	-webkit-border-bottom-left-radius: @bl;
+	-moz-border-top-left-radius: @tl;
+	-moz-border-top-right-radius: @tr;
+	-moz-border-bottom-right-radius: @br;
+	-moz-border-bottom-left-radius: @bl;
+	border-top-left-radius: @tl;
+	border-top-right-radius: @tr;
+	border-bottom-right-radius: @br;
+	border-bottom-left-radius: @bl;
+}
+
+// BOX SHADOW (@x offset, @y offset, @blur, @spread, @color)
+// ------------------------------------------------------------------------------------------
+.box-shadow(@x,@y,@b,@s,@color){
+	-moz-box-shadow:    @x @y @b @s @color;
+	-webkit-box-shadow: @x @y @b @s @color;
+	box-shadow:         @x @y @b @s @color;
 }

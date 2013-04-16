@@ -1,7 +1,7 @@
-/* Variables and Mixins
-*/
+// LESS Variables
+// ------------------------------------------------------------------------------------------
 
-// STANDARD FORM MESSAGE COLOURS
+// FORM MESSAGE COLOURS
 // ------------------------------------------------------------------------------------------
 
 @message-good-text: #468847;
@@ -21,41 +21,3 @@
 @font-head: arial,sans-serif;
 @font-body: arial,sans-serif;
 
-
-// MIXINS
-// ------------------------------------------------------------------------------------------
-
-// GENERIC SPRITE
-.spr-main(@x, @y)
-{
-	background-image: url();
-	background-repeat: no-repeat;
-	background-position: @x @y;
-}
-
-// ROUNDED BOXES
-// -MOZ / -WEBKIT ARE A BIT REDUNDANT BUT CAN STAY FOR NOW
-.rounded(@radius: 5px)
-{
-	-moz-border-radius: @radius;
-	-webkit-border-radius: @radius;
-	border-radius: @radius;
-}
-
-// PARTIALLY ROUNDED BOXES
-// AGAIN, -MOZ / -WEBKIT ARE A BIT REDUNDANT BUT CAN STAY FOR NOW
-.rounded-partial(@tl, @tr, @br, @bl)
-{
-	-webkit-border-top-left-radius: @tl;
-	-webkit-border-top-right-radius: @tr;
-	-webkit-border-bottom-right-radius: @br;
-	-webkit-border-bottom-left-radius: @bl;
-	-moz-border-top-left-radius: @tl;
-	-moz-border-top-right-radius: @tr;
-	-moz-border-bottom-right-radius: @br;
-	-moz-border-bottom-left-radius: @bl;
-	border-top-left-radius: @tl;
-	border-top-right-radius: @tr;
-	border-bottom-right-radius: @br;
-	border-bottom-left-radius: @bl;
-}

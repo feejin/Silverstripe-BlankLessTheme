@@ -1,4 +1,5 @@
 /* normalize.css v2.0.1 | MIT License | git.io/normalize
+   Modified to remove duplications when using Meyer reset
 */
 
 // Edited to remove clashes with reset and stripped most
@@ -28,8 +29,8 @@ audio:not([controls]) {
 // 2. Prevents iOS text size adjust after orientation change, without disabling user zoom.
 
 html {
-    -webkit-text-size-adjust: 100%; /* 1 */
-    -ms-text-size-adjust: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; // 1
+    -ms-text-size-adjust: 100%; // 1
 }
 
 // Addresses `outline` inconsistency between Chrome and other browsers.
@@ -75,8 +76,8 @@ input[disabled] {
 
 input[type="checkbox"],
 input[type="radio"] {
-    box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
+    box-sizing: border-box; // 1
+    padding: 0; // 2
 }
 
 // Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
