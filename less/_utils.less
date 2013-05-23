@@ -28,11 +28,11 @@
     zoom: 1; // IE 6/7
 }
 
-// GENERIC SPRITE (@ox offset, @y offset)
+// GENERIC SPRITE MIXIN (@ox offset, @y offset)
 // ------------------------------------------------------------------------------------------
 .sprite(@x, @y)
 {
-	background-image: url();
+	background-image: url('../path/to/image.jpg');
 	background-repeat: no-repeat;
 	background-position: @x @y;
 }
@@ -67,7 +67,50 @@
 // BOX SHADOW (@x offset, @y offset, @blur, @spread, @color)
 // ------------------------------------------------------------------------------------------
 .box-shadow(@x,@y,@b,@s,@color){
-	-moz-box-shadow:    @x @y @b @s @color;
+	-moz-box-shadow: @x @y @b @s @color;
 	-webkit-box-shadow: @x @y @b @s @color;
-	box-shadow:         @x @y @b @s @color;
+	box-shadow: @x @y @b @s @color;
+}
+
+// LINEAR GRADIENT - No colour stops
+// ------------------------------------------------------------------------------------------
+.linear-gradient(@color1, @color2){
+	background-color: @color1;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@color1), to(@color2)); // Safari 4-5, Chrome 1-9
+	background: -webkit-linear-gradient(top, @color1, @color2); // Safari 5.1, Chrome 10+
+	background: -moz-linear-gradient(top, @color1, @color2); // Firefox 3.6+
+	background: -ms-linear-gradient(top, @color1, @color2); // IE 10
+	background: -o-linear-gradient(top, @color1, @color2); // Opera 11.10+
+}
+
+// ROTATE
+// ------------------------------------------------------------------------------------------
+.rotate(@angle){
+	-webkit-transform: rotate(@angle); // Safari
+	-moz-transform: rotate(@angle); // Firefox
+	-ms-transform: rotate(@angle); // IE
+	-o-transform: rotate(@angle); // Opera
+}
+
+// TRANSITIONS
+// ------------------------------------------------------------------------------------------
+.transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
+}
+
+.transition-delay(@transition-delay) {
+	-webkit-transition-delay: @transition-delay;
+	-moz-transition-delay: @transition-delay;
+	-o-transition-delay: @transition-delay;
+	transition-delay: @transition-delay;
+}
+
+.transition-duration(@transition-duration) {
+	-webkit-transition-duration: @transition-duration;
+	-moz-transition-duration: @transition-duration;
+	-o-transition-duration: @transition-duration;
+	transition-duration: @transition-duration;
 }
