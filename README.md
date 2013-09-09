@@ -1,5 +1,11 @@
 #SilverStripe Blank Theme#
 
+##Discontinued##
+
+I've switched to SCSS and incorporated this blank theme into [SilverStripe-CleanInstall](https://github.com/feejin/Silverstripe-CleanInstall/)
+
+##About##
+
 Bare bones theme for use with SilverStripe 3.
 Designed to be used with [LESS](http://lesscss.org).
 
